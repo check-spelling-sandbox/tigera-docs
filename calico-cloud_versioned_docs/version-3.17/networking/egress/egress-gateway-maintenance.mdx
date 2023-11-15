@@ -48,7 +48,7 @@ Before we can observe these annotations, we must first configure a _termination 
 
 To widen our maintenance window, we can adjust the `terminationGracePeriodSeconds` field on our egress gateway pods. The amount of time we set for the termination grace period dictates how much time a dependent workload has to prepare for a gateway going down.
 
-Let's add a termination grace period of 60 seconds to all pods in our egress gateway deploymment, so that our egress-dependent workloads have a wider window to react:
+Let's add a termination grace period of 60 seconds to all pods in our egress gateway deployment, so that our egress-dependent workloads have a wider window to react:
 
 ```sh
 $  patch a termination grace period of 60s into egress gateway deployment
