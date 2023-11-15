@@ -101,7 +101,7 @@ The basic workflow is:
    Required to explicitly allow the tigera-firewall-controller to access the FortiManager API.
 1. From system settings, create an Admin profile with Read-Write access for `Policy & Objects`.
    For example: `tigera_api_user_profile`
-1. Create a JSON API administrator, associate this user with the `tigera_api_user_profile` profile, and addthe CIDR or IP address of your Kubernetes cluster nodes as `Trusted Hosts`.
+1. Create a JSON API administrator, associate this user with the `tigera_api_user_profile` profile, and add the CIDR or IP address of your Kubernetes cluster nodes as `Trusted Hosts`.
 1. Note the username and password.
 
 ### Create a config map for address selection in firewall controller
