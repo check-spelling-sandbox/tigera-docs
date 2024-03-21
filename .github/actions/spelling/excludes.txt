@@ -2,15 +2,13 @@
 (?:^|/)(?i)COPYRIGHT
 (?:^|/)(?i)LICEN[CS]E
 (?:^|/)3rdparty/
-(?:^|/)_release-v3\.15-release-notes\.mdx$
 (?:^|/)go\.sum$
 (?:^|/)package(?:-lock|)\.json$
 (?:^|/)Pipfile$
-(?:^|/)projectcalico\.mdx$
 (?:^|/)pyproject.toml
 (?:^|/)requirements(?:-dev|-doc|-test|)\.txt$
 (?:^|/)vendor/
-(?:|$^ 91.67% - excluded 11/12)(?:^|/)felixconfig\.mdx$
+ignore$
 \.a$
 \.ai$
 \.all-contributorsrc$
@@ -65,7 +63,6 @@
 \.qm$
 \.s$
 \.sig$
-\.snap$
 \.so$
 \.svgz?$
 \.sys$
@@ -84,7 +81,3 @@
 \.zip$
 ^\.github/actions/spelling/
 ^\Q.github/workflows/spelling.yml\E$
-^\Qstatic/.nojekyll\E$
-^\Qstatic/css/swagger-ui.css\E$
-^\Qstatic/json/calico-api-swagger.json\E$
-ignore$
