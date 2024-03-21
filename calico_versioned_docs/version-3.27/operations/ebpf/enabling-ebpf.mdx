@@ -59,7 +59,7 @@ Limitations:
 
   - Dual stack is not supported. However, ipv4 traffic is allowed into hosts (not workloads) because many managed Kubernetes environments have ipv4-based control plane.
   - `doNotTrack` policies (xdp) are not supported
-  - IPIP is not supported ({{prodname}} iptables does not supporte it either). VXLAN is the recommended overlay for eBPF mode.
+  - IPIP is not supported ({{prodname}} iptables does not support it either). VXLAN is the recommended overlay for eBPF mode.
 
 To enable IPv6 in eBPF mode, see [Configure dual stack or IPv6 only](../../networking/ipam/ipv6.mdx). You may be able to run with non-Calico IPAM. eks-cni is known to work.
 
@@ -343,7 +343,7 @@ calicoctl patch felixconfiguration default --patch='{"spec": {"bpfEnabled": true
 
 </Tabs>
 
-When enabling eBPF mode, pre-existing connections continue to use the non-BPF datapath; such connections should
+When enabling eBPF mode, preexisting connections continue to use the non-BPF datapath; such connections should
 not be disrupted, but they do not benefit from eBPF mode’s advantages.
 
 ### Try out DSR mode
