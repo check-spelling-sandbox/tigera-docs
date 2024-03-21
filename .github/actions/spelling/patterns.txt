@@ -1,82 +1,94 @@
 # See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
 
 # Automatically suggested patterns
-# hit-count: 12020 file-count: 1763
+# hit-count: 12126 file-count: 1814
 # https/http/file urls
 (?:\b(?:https?|ftp|file)://)[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]
 
-# hit-count: 7255 file-count: 994
+# hit-count: 7306 file-count: 993
 # version suffix <word>v#
 (?:(?<=[A-Z]{2})V|(?<=[a-z]{2}|[A-Z]{2})v)\d+(?:\b|(?=[a-zA-Z_]))
 
-# hit-count: 905 file-count: 878
+# hit-count: 962 file-count: 935
 # node packages
-(["'])\@[^/'" ]+/[^/'" ]+\g{-1}
+(["'])@[^/'" ]+/[^/'" ]+\g{-1}
 
-# hit-count: 581 file-count: 126
+# hit-count: 539 file-count: 113
+# hex runs
+\b[0-9a-fA-F]{16,}\b
+
+# hit-count: 537 file-count: 123
 # kubernetes pod status lists
 # https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-phase
 \w+(?:-\w+)+\s+\d+/\d+\s+(?:Running|Pending|Succeeded|Failed|Unknown)\s+
 
-# hit-count: 515 file-count: 105
-# hex runs
-\b[0-9a-fA-F]{16,}\b
-
-# hit-count: 307 file-count: 120
+# hit-count: 321 file-count: 125
 # IPv6
 \b(?:[0-9a-fA-F]{0,4}:){3,7}[0-9a-fA-F]{0,4}\b
 
-# hit-count: 284 file-count: 93
+# hit-count: 288 file-count: 96
 # kubernetes object suffix
 -[0-9a-f]{10}-\w{5}\s
 
-# hit-count: 280 file-count: 102
+# hit-count: 272 file-count: 96
 # uuid:
 \b[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}\b
 
-# hit-count: 257 file-count: 92
+# hit-count: 269 file-count: 97
 # hex digits including css/html color classes:
-(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9_a-fA-FgGrR]*?[a-fA-FgGrR]{2,}[0-9_a-fA-FgGrR]*(?:[uUlL]{0,3}|[iu]\d+)\b
+(?:[\\0][xX]|\\u|[uU]\+|#x?|%23)[0-9_a-fA-FgGrR]*?[a-fA-FgGrR]{2,}[0-9_a-fA-FgGrR]*(?:[uUlL]{0,3}|[iu]\d+)\b
 
-# hit-count: 240 file-count: 98
-# base64 encoded content, possibly wrapped in mime
-(?:^|[\s=;:?])[-a-zA-Z=;:/0-9+]{50,}(?:[\s=;:?]|$)
+# hit-count: 234 file-count: 89
+# libraries
+\blib(?!rar(?:ies|y))(?=[a-z])
 
-# hit-count: 179 file-count: 35
+# hit-count: 200 file-count: 49
 # IServiceProvider / isAThing
-\b(?:I(?!Ps)|isA)(?=(?:[A-Z][a-z]{2,})+\b)
+\b(?:IP(?=[a-z])|(?:I|isA)(?=(?:[A-Z][a-z]{2,})+(?:[A-Z]|\b)))
 
-# hit-count: 56 file-count: 13
+# hit-count: 174 file-count: 70
+# AWS VPC
+vpc-\w+
+
+# hit-count: 60 file-count: 17
 # URL escaped characters
-\%[0-9A-F][A-F](?=[A-Za-z])
+%[0-9A-F][A-F](?=[A-Za-z])
 
-# hit-count: 45 file-count: 33
+# hit-count: 48 file-count: 36
 # tar arguments
 \b(?:\\n|)g?tar(?:\.exe|)(?:(?:\s+--[-a-zA-Z]+|\s+-[a-zA-Z]+|\s[ABGJMOPRSUWZacdfh-pr-xz]+\b)(?:=[^ ]*|))+
 
 # hit-count: 20 file-count: 16
 # curl arguments
-\b(?:\\n|)curl(?:\s+-[a-zA-Z]{1,2}\b)*(?:\s+-[a-zA-Z]{3,})(?:\s+-[a-zA-Z]+)*
+\b(?:\\n|)curl(?:\.exe|)(?:\s+-[a-zA-Z]{1,2}\b)*(?:\s+-[a-zA-Z]{3,})(?:\s+-[a-zA-Z]+)*
 
 # hit-count: 13 file-count: 2
 # css url wrappings
 \burl\([^)]+\)
 
+# hit-count: 9 file-count: 5
+# C network byte conversions
+(?:\d|\bh)to(?!ken)(?=[a-z])|to(?=[adhiklpun]\()
+
 # hit-count: 7 file-count: 7
 # sed regular expressions
 sed 's/(?:[^/]*?[a-zA-Z]{3,}[^/]*?/){2}
 
-# hit-count: 4 file-count: 2
+# hit-count: 6 file-count: 3
 # Contributor
 \[[^\]]+\]\(https://github\.com/[^/\s"]+/?\)
 
-# hit-count: 3 file-count: 2
+# hit-count: 2 file-count: 1
+# data url in quotes
+([`'"])data:(?:[^ `'"].*?|)(?:[A-Z]{3,}|[A-Z][a-z]{2,}|[a-z]{3,}).*\g{-1}
+
+# hit-count: 2 file-count: 1
 # assign regex
-= /[^*]*?(?:[a-z]{3,}|[A-Z]{3,}|[A-Z][a-z]{2,}).*/
+= /[^*].*?(?:[a-z]{3,}|[A-Z]{3,}|[A-Z][a-z]{2,}).*/[gi]?(?=\W|$)
 
 # hit-count: 1 file-count: 1
-# GitHub SHA refs
-\[([0-9a-f]+)\]\(https://(?:www\.|)github.com/[-\w]+/[-\w]+/commit/\g{-1}[0-9a-f]*
+# GitHub actions
+\buses:\s+[-\w.]+/[-\w./]+@[-\w.]+
 
 # hit-count: 1 file-count: 1
 # javascript match regex
@@ -89,8 +101,14 @@ sed 's/(?:[^/]*?[a-zA-Z]{3,}[^/]*?/){2}
 token:\s+[-.\w]+
 
 \bget pods -n(?=\w)
+/\\s(?=[a-z])
 
-/\\s.*/
+certificate-authority-data: .*$
+
+\bcss-\w{6,7}\b(?=[ "](?!"))
+
+# contributors
+\(@\w+\)$
 
 # Questionably acceptable forms of `in to`
 # Personally, I prefer `log into`, but people object
@@ -112,7 +130,10 @@ token:\s+[-.\w]+
 # go templates
 \s(\w+)\s+\g{-1}\s+\`(?:graphql|inject|json|yaml):
 # doxygen / javadoc / .net
-(?:[\\@](?:brief|groupname|t?param|return|retval)|(?:public|private|\[Parameter(?:\(.+\)|)\])(?:\s+static|\s+override|\s+readonly)*)(?:\s+\{\w+\}|)\s+(\w+)\s+\g{-1}\s
+(?:[\\@](?:brief|groupname|link|t?param|return|retval)|(?:public|private|\[Parameter(?:\(.+\)|)\])(?:\s+(?:static|override|readonly|required|virtual))*)(?:\s+\{\w+\}|)\s+(\w+)\s+\g{-1}\s
+
+# Python package registry has incorrect spelling for macOS / Mac OS X
+"Operating System :: MacOS :: MacOS X"
 
 # Commit message -- Signed-off-by and friends
 ^\s*(?:(?:Based-on-patch|Co-authored|Helped|Mentored|Reported|Reviewed|Signed-off)-by|Thanks-to): (?:[^<]*<[^>]*>|[^<]*)\s*$

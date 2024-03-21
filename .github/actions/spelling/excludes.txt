@@ -6,11 +6,10 @@
 (?:^|/)go\.sum$
 (?:^|/)package(?:-lock|)\.json$
 (?:^|/)Pipfile$
-(?:^|/)projectcalico\.mdx$
 (?:^|/)pyproject.toml
 (?:^|/)requirements(?:-dev|-doc|-test|)\.txt$
 (?:^|/)vendor/
-(?:|$^ 91.67% - excluded 11/12)(?:^|/)felixconfig\.mdx$
+/config/vocabularies/CalicoDocs/[^/]+$
 \.a$
 \.ai$
 \.all-contributorsrc$
@@ -65,7 +64,6 @@
 \.qm$
 \.s$
 \.sig$
-\.snap$
 \.so$
 \.svgz?$
 \.sys$
@@ -84,6 +82,16 @@
 \.zip$
 ^\.github/actions/spelling/
 ^\Q.github/workflows/spelling.yml\E$
+^\Qcalico-cloud/reference/resources/felixconfig.mdx\E$
+^\Qcalico-cloud_versioned_docs/version-19-1/reference/resources/felixconfig.mdx\E$
+^\Qcalico-enterprise/reference/resources/felixconfig.mdx\E$
+^\Qcalico-enterprise_versioned_docs/version-3.16/reference/resources/felixconfig.mdx\E$
+^\Qcalico-enterprise_versioned_docs/version-3.17/reference/resources/felixconfig.mdx\E$
+^\Qcalico-enterprise_versioned_docs/version-3.18-2/reference/resources/felixconfig.mdx\E$
+^\Qcalico-enterprise_versioned_docs/version-3.18/reference/resources/felixconfig.mdx\E$
+^\Qcalico-enterprise_versioned_docs/version-3.19-1/reference/resources/felixconfig.mdx\E$
+^\Qcalico_versioned_docs/version-3.25/reference/resources/felixconfig.mdx\E$
+^\Qcalico_versioned_docs/version-3.26/reference/resources/felixconfig.mdx\E$
 ^\Qstatic/.nojekyll\E$
 ^\Qstatic/css/swagger-ui.css\E$
 ^\Qstatic/json/calico-api-swagger.json\E$
